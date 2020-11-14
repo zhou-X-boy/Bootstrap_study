@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>BootstrapV3 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/jquery-3.1.0.min.js"></script>	
+    <script src="js/bootstrap.js"></script>
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    </head>
+    <body  style="overflow-x: hidden;">
+        <div id="nav1" class="container">
+            <div id="navbar-main">
+                <div class="navbar navbar-inverse navbar-fixed-top">
+                      <div class="container">
+                          <div class="navbar-header">
+                            <a class="navbar-brand" href="index.html">首页</a>
+                              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#dh">
+                                  <span class="sr-only">换导航</span>
+                                  <span class="icon-bar"></span>
+                                  <span class="icon-bar"></span>
+                                  <span class="icon-bar"></span>
+                              </button>
+                          </div>
+                          <div class="collapse navbar-collapse" id="dh">
+                              <ul class="nav navbar-nav">
+                                <li><a href="#a1">社区</a></li>
+                                <li><a href="#a2">头条</a></li>
+                                <li><a href="#a3">影音动漫</a></li>
+                                <li><a href="zj.html">主机游戏</a></li>
+                                <li>
+                                    <form class="navbar-form navbar-left"><!--form-group封装label和input -->
+                                        <label for="in" style="color: aliceblue;">输入</label>
+                                        <div class="input-group"><!--input-group-封装icon字库，按钮，输入框组 -->
+                                            <span class="input-group-addon"><!--input-group-addon封装input左边或右边 -->
+                                            <span class=" glyphicon glyphicon-home "></span>
+                                            </span>
+                                            <input id="in" type="text" class="form-control" placeholder="PUBG">
+                                            <span class="input-group-btn">
+                                            <button type="submit" class="btn btn-primary" ><span class="glyphicon glyphicon-search"></span>搜索</button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </li>
+                                <li id="con1_right class=" well" style="margin-top: 10px;">
+                                    <!-- 注册 -->
+                                    <a class="btn btn-warning" data-toggle="modal" data-target="#reg">注册</a>
+                                </li>
+                                <li id="con1_right class=" well" style="margin-top: 10px;">
+                                    <!-- 登录 -->
+                                    <a class="btn btn-warning" data-toggle="modal" data-target="#login">登录</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ol class="breadcrumb">
+                            目前所在的网站位置：
+                            <li><a href="index.html">首页</a></li>
+                            <li><a href="hy.html">盒友杂谈</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- 注册模态框 -->
+            <div id="reg" class="modal" tabindex="-1">
+                <!-- 窗口声明 -->
+                <div class="modal-dialog">
+                    <!-- 内容声明 -->
+                    <div class="modal-content">
+                        <!-- 头部 -->
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span>&times;</span>
+                            </button>
+                            <h4 class="modal-title">会员注册</h4>
+                        </div>
+                        <!-- 主体 -->
+                        <div class="modal-body">
+                            <!-- 注册表单 -->
+                            <div class="form-group">
+                                <form class="form-horizontal row">
+                                    <label class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">Email</label>
+                                    <input type="email" name="email" class="col-lg-8 col-md-8 col-sm-8 col-xs-8"  placeholder="Email"/>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+                                </form>
+                                <form class="form-horizontal row" style="margin-top: 15px;">
+                                    <label class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">Password</label>
+                                    <input type="password" name="password" class="col-lg-8 col-md-8 col-sm-8 col-xs-8" placeholder="Password"/>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+                                </form>
+                                <form class="form-horizontal row" style="margin-top: 15px;">
+                                    <label class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">Username</label>
+                                    <input type="text" name="username" class="col-lg-8 col-md-8 col-sm-8 col-xs-8" placeholder="Username"/>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- 注脚 -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success">注册</button>
+                            <button type="button" class="btn btn-warning">登录</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 登录模态框 -->
+            <div id="login" class="modal" tabindex="-1">
+                <!-- 窗口声明 -->
+                <div class="modal-dialog">
+                    <!-- 内容声明 -->
+                    <div class="modal-content">
+                        <!-- 头部 -->
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span>&times;</span>
+                            </button>
+                            <h4 class="modal-title">会员登录</h4>
+                        </div>
+                        <!-- 主体 -->
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <form class="form-horizontal row" style="margin-top: 15px;">
+                                    <label class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">Username</label>
+                                    <input type="text" name="username" class="col-lg-8 col-md-8 col-sm-8 col-xs-8" placeholder="Username"/>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+                                </form>
+                                <form class="form-horizontal row" style="margin-top: 15px;">
+                                    <label class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">Password</label>
+                                    <input type="password" name="password" class="col-lg-8 col-md-8 col-sm-8 col-xs-8" placeholder="Password"/>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- 注脚 -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#reg">注册</button>
+                            <button type="button" class="btn btn-primary">登录</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jumbotron" style="background-image: url(img/jumbotron.jpg); background-repeat: no-repeat;background-size: 100% 100%;" >
+            <div class="container">
+                <div id="lbt" style="width: 100%; ">
+                    <div id="carousel-example-generic"  class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="img/bz/hy1.png" alt="..." style="height:300px;width:100%;display:block;">
+                                <div class="carousel-caption">
+                                    <p>SpaceX获美国联邦航空管理局许可：执飞星舰飞船原型机</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="img/bz/hy2.png" alt="..." style="height:300px;width:100%;display:block;">
+                                <div class="carousel-caption">
+                                    <p>《金刚狼3》导演回顾金刚狼之死；《皇家次子女秘密组织》首曝预告</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="img/bz/hy3.png" alt="..." style="height:300px;width:100%;display:block;">
+                                <div class="carousel-caption">
+                                    <p>要求背诵全文——盘点那些刻在DNA中的动画名台词</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" >
+            <div class="row" id="a1">
+                <!--导航部分-->
+                <div id="ml" class="col-lg-4 col-md-4 col-sm-4">
+                    <dl class="row">
+                    <dt class="col-lg-5 col-md-5 col-sm-5">
+                        <img src="img/bz/hy1.png" class="img-responsive">
+                    </dt>
+                    <dd class="col-lg-7 col-md-7 col-sm-7">
+                        <a href="#ml1">SpaceX获美国联邦航空管理局许可：执飞星舰飞船原型机</a>
+                        <p class="text-right">小明</p>
+                    </dd>
+                    </dl>
+                    <dl class="row">
+                    <dt class="col-lg-5 col-md-5 col-sm-5">
+                        <img src="img/bz/hy2.png"  class="img-responsive">
+                    </dt>
+                    <dd class="col-lg-7 col-md-7 col-sm-7">
+                        <a href="#ml2">《金刚狼3》导演回顾金刚狼之死；《皇家次子女秘密组织》首曝预告。</a>
+                        <p class="text-right">小张</p>
+                    </dd>
+                    </dl>
+                    <dl class="row">
+                    <dt class="col-lg-5 col-md-5 col-sm-5">
+                        <img src="img/bz/hy3.png" class="img-responsive">
+                        </dt>
+                    <dd class="col-lg-7 col-md-7 col-sm-7">
+                        <a href="#ml3">要求背诵全文——盘点那些刻在DNA中的动画名台词。</a>
+                        <p class="text-right">韩梅梅</p>
+                    </dd>
+                    </dl>
+                </div>
+                <!--长文章部分-->
+                <div data-spy="scroll" data-target="#ml" data-offset="0" style="height: 300px; overflow: auto; position: relative;overflow-y: hidden;" class="col-lg-8 col-md-4 col-sm-8">
+                    <div id="ml1">
+                        <h1 class="text-center">SpaceX获美国联邦航空管理局许可：执飞星舰飞船原型机</h1>
+                        <time>47分钟前</time>
+                        <address></address>
+                        <p>北京时间5月29日早间消息，据外媒报道，美国太空探索技术公司SpaceX已经获得美国联邦航空管理局（FAA，Federal Aviation Administration）的飞行许可，可以执飞星舰（Starship）飞船原型机，为在德克萨斯州Boca Chica村基地的试飞做准备。
+                        <blockquote class="blockquote-reverse"> 小明 </blockquote>	
+                        </p>
+                    </div>
+                    <div id="ml2">
+                        <h1 class="text-center">《金刚狼3》导演回顾金刚狼之死；《皇家次子女秘密组织》首曝预告。</h1>
+                        <time>1小时前</time>
+                        <address></address>
+                        <p>5月28日，电影《金刚狼3》举行了在线重看活动，导演詹姆斯·曼高德和20世纪影业分享了该片多张剧照、幕后照和造型照，金刚狼、老年X教授、小狼女在幕后深情拥抱。
+                        <blockquote class="blockquote-reverse"> 小张 </blockquote>	
+                        </p>
+                    </div>
+                    <div id="ml3">
+                        <h1 class="text-center">要求背诵全文——盘点那些刻在DNA中的动画名台词。</h1>
+                        <time>5小时前</time>
+                        <address></address>
+                        <p><strong>“我们一直在遗忘，但总有只言片语永远留在回忆中”</strong>
+                            想必大家都背过名言警句吧。
+                            那些经典的话语无论过去多久，再次说出来时依旧是振聋发聩，引人深思。
+                        <blockquote class="blockquote-reverse"> 韩梅梅</blockquote>	
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="a2">
+                <div class="jumbotron" style="background-image: url(img/BZ/TT.PNG);">
+                    <div class="page-header"> 
+                        <h1>为<small></small>全世界的<strong>湮灭</strong>而举杯——<span class="label label-warning">后启示录篇</span></small> </h1> 
+                    </div>
+                    <div class="container text-center">
+                        <h2 class="text-primary">后启示录篇</h2>
+                        <p style="color: white;height: 400px; overflow: auto; position: relative;">Apocalyptic and post-apocalyptic，即启示录和后启示录，是科幻小说的一种体裁，同样的，它们也可以划归为反乌托邦小说或者恐怖小说的子类。
+                            想要理解后启示录风格必须先要对启示录这个概念有所了解（是有些啰嗦，请耐心看下去吧）
+                            所谓的启示录（Apocalyptic）源自希腊语，意为“启示（revelation）”。读者可以通俗的将其理解为“预言，揭示未知的事物（不仅仅是预测未来）”。启示录内容多是宗教经书中描绘的世界末日场景，属于预言性文学（prophetical writing），启示录的目的多是警示信徒（而启示录是《圣经》新约的其中一卷书，记载了使徒约翰在拔摩海岛上看到的异象（对世人的大灾难），也是很多游戏作品中终极武器的代号）
+                            如同圣经启示录中描写的大灾难，启示录事件（The apocalypse event），这一词汇被用来形容危及全球的大灾难事件或者潜在风险，它可以通俗的理解为世界末日，启示录灾难的成因是各种各样的，并且可以简单的划分为人为风险和非人为风险（外部风险）。体现在人为风险上:首先是技术风险，这种灾难可能来自于反叛的AI技术，具有破坏性的生物技术或纳米技术；其次，全球治安的失调与恶化也会导致灾难的发生，如全球性的大规模战争，核战争；基于转基因生物的生物恐布主义，破坏硬件设施的网络恐布主义以及无法控制传播的烈性流行病（结合时事）；再次，在地球治理领域同样存在诸如全球变暖，包含物种灭绝的环境退化，地区性饥荒、人口爆炸、粮食歉收与农业非可持续发展（如电影《星际穿越》（2014））等灾难形式。
+                            体现在外在风险上：灾难形式就更加的五花八门：小行星撞击，恒星射线大爆发（参见刘慈欣《超新星纪元》），破坏电子设备的地磁风暴，自然气候的持续恶化（参见何夕《天年》），敌对地外生命入侵和太阳内核极具老化（然后膨胀为红巨星），吞没地球（参见刘慈欣《流浪地球》）。。</p>
+                            <div class="alert alert-warning alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <strong>关注</strong> 
+                            </div>
+                        <p><a href="#" class="btn btn-default btn-success ">点赞</a></p>
+                        <p class="text-right" style="color: red;">阅读人数<span class="badge">10000</span>点赞人数<span class="badge">600</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="a3">
+                <div class="jumbotron" style="background-image: url(img/bz/yydm.PNG);">
+                    <div class="page-header"> 
+                        <p style="color: white; font-size: 25px;">《哥斯拉大战金刚》或将延期至2021年；恐怖片<span class="label label-warning">《凶宅怪谈》</span>新预告片</p>
+                    </div>
+                    <div class="container text-center">
+                        <h2 class="text-primary" style="color: red;">史诗级大战《哥斯拉大战金刚》或将延期至2021年</h2>
+                        <p style="color: white;height: 400px; overflow: auto; position: relative;">
+                            华纳官方曾在去年2019年11月的时候宣布，《哥斯拉大战金刚》的北美档期将从2020年3月13日延迟到11月20日，不过现在因为疫情的原因，很多的暑期的电影都被推迟到了11月，11月份的档期已经非常拥挤
+                            <img src="img/bz/yydm.png" width="100%">
+                            近日有外媒表示，《哥斯拉大战金刚》的档期将会推迟至2021年5月21日上映，这个档期原本是《黑客帝国4》的，不过目前华纳官方并未回应这一消息。
+                            传奇出版的前传漫画中金刚长高了，而且还有胡子
+                            也有网友在社交媒体上爆料，原定将于今年11月17日发售的（电影上映前3天）《哥斯拉大战金刚》艺术设定集已经推迟至2021年5月21日发售，这可能也暗示着这部电影将推迟影片的档期。
+                            
+                            </p>
+                            <div class="alert alert-warning alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <strong>关注</strong> 
+                            </div>
+                        <p><a href="#" class="btn btn-default btn-success ">点赞</a></p>
+                        <p class="text-right" style="color: red;">阅读人数<span class="badge">10000</span>点赞人数<span class="badge">600</span></p>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <ul class="pager">  
+                    <li class="previous">
+                      <a  href="#">上一页</a></li>  
+                   <li class="next">
+                     <a href="#">下一页</a></li>  
+                 </ul> 
+            </nav>
+        </div>
+        <!-- 页脚 -->
+        <section class="section-divider textdivider divider1" style="background:url('img/bz/bz5.jpg');">
+            <div class="container">
+                <div class="row white">
+                <br>
+                    <h1 class="centered" style="color: white;">联系信息</h1>
+                    <hr>
+                    
+                    <div class="col-lg-6">
+                        <p><span class="icon icon-phone" style="color: white;"> +86 10086</span><br/>
+                            <span class="icon icon-mobile"  style="color: white;"> +86 10000</span> <br/>
+                            <span class="icon icon-envelop"></span> <a href="#"> www.baidu.com</a> <br/>
+                            <span class="icon icon-facebook"></span> <a href="#"> STEAM代理商 </a> <br/>
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p style="color: white;">小黑盒提供以不同游戏为话题的优质内容社区，让有共同爱好的玩家能够一起分享快乐，创造更加精彩的游戏世界！</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+        <script src="js/jquery.min.js"></script>
+        <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>BootstrapV3 101 Template组件</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container" style="border:  1px solid blue;"><!--版芯-->
+		<div id="header"><!--导航功能-->
+			<ul class="nav nav-tabs">
+			  <li class="active"><a href="#"><span class="
+glyphicon glyphicon-home"></span>HOME</a></li>
+			  <li>
+				  <a href="#">
+					  <span class="glyphicon glyphicon-search"></span>
+					  <!--icon字库组：span,i-->
+					  SVN
+				  </a>
+			  </li>
+			  <li><a href="#">iOS</a></li>
+			  <li><a href="#">VB.Net</a></li>
+			  <li><a href="#">Java</a></li>
+			  <li><a href="#">PHP</a></li>
+			  <li class="dropdown" ><!--class="dropup"上拉-->
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			         <i class="glyphicon glyphicon-user"></i>联系我们
+					 <span class="caret"></span><!-- 三角 -->
+			      </a>
+				  <!-- 联系我们的子菜单：下拉菜单功能 -->
+				  <ul class="dropdown-menu">
+					  <li>QQ</li>
+					  <li>微信</li>
+					  <li>TEL</li>
+				  </ul>
+			  </li>
+			  <!-- 导航内的表单：navbar-form,navbar-left,navbar-right -->
+			  <form action="" class="navbar-form navbar-right">
+				  <span class="btn-toolbar"><!--btn-toolbar工具条封装按钮组-->
+					  <span class="btn-group"><!--btn-group按钮组，封装多个按钮-->
+						  <a class="btn  btn-info btn-lg">登录</a>
+						  <a class="btn  btn-danger btn-lg">注册</a>
+					  </span>
+					  <span class="btn-group"><!--btn-group按钮组，封装多个按钮-->
+						  <a class="btn btn-info btn-lg">活动1</a>
+						  <a class="btn btn-danger btn-lg">活动2</a>
+					  </span>
+				  </span>
+				  <div class="form-group"><!--form-group封装laber和他的input-->
+				    <label for="in">输入：</label>
+					<div class="input-group"><!--input-group封装icon字库，按钮，输入框组-->
+						<span class="input-group-addon"><!--input-group-addon是封装input左边或右边的icon字库-->
+                            <span class="glyphicon glyphicon-education"></span>
+						</span>
+                        <input id="in" type="text" class="form-control" placeholder="向往的生活">
+						<span class="input-group-btn">
+							<button type="submit" class="btn btn-default">提交</button>
+						</span>
+					</div>
+				</div>
+			 </form>
+	
+			</ul>
+			<ul class="nav nav-pills nav-justified">
+			  <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+			  <li><a href="#"><span class="glyphicon glyphicon-asterisk">SVN</a></li>
+			  <li><a href="#"><span class="glyphicon glyphicon-plus">iOS</a></li>
+			  <li><a href="#"><span class="glyphicon glyphicon-euro">VB.Net</a></li>
+			  <li><a href="#"><span class="glyphicon glyphicon-minus">Java</a></li>
+			  <li><a href="#"><span class="glyphicon glyphicon-cloud">PHP</a></li>
+			</ul>
+			<div id="two">
+				<!-- 基于响应式的到导航条，不可折叠 -->
+				<nav class="navbar navbar-default">
+					<div class="container">
+						<div class="navbar-header">
+							<a href="#" class="navbar-brand">标题</a>
+						</div>
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">首页</a></li>
+							<li><a href="#">资讯</a></li>
+							<li class="disabled"><a href="#">产品</a></li>
+							<li><a href="#">关于</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		    <hr/>
+			<div id="three">
+				<!-- 基于响应式的到导航条，可折叠 -->
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<a href="#" class="navbar-brand">标题</a>
+							<button type="button" class="navbar-toggle" data-toggle="collapse"	 data-target="#dh">
+								<span class="sr-only">换导航</span><!--读屏软件读的，不显示-->
+								<span class="icon-bar"></span><!--一根线-->
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+					
+						</div>
+						<div class="collapse navbar-collapse" id="dh">
+							<ul class="nav navbar-nav">
+								<li class="active"><a href="#">首页</a></li>
+								<li><a href="#">资讯</a></li>
+								<li class="disabled"><a href="#">产品</a></li>
+								<li><a href="#">关于</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div id="ru">
+			<ol class="breadcrumb">
+				您目前所在的网站位置是：
+				<li><a href="#">Home</a></li>
+				<li><a href="#">2013</a></li>
+				<li class="active">十一月</li>
+			</ol>
+			<ul class="pagination ">
+				<li><a href="#">&laquo;</a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">&raquo;</a></li>
+			</ul>
+			<ul class="pager">  
+			   <li class="previous">
+				 <a  href="#">上一页</a></li>  
+			  <li class="next disabled">
+				<a href="#">下一页</a></li>  
+			</ul> 
+	    </div>
+	</div>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+

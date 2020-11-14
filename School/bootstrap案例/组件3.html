@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>BootstrapV3 101 Template组件3</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="jumbotron" style="background-image: url(b.jpeg); background-repeat: no-repeat;background-size: 100% 100%;">
+		<div class="container" style="visibility: hidden;">
+			<h2>网站标题</h2>
+			<p>这是一个学习性的网站！</p>
+			<p><a href="#" class="btn btn-default">更多内容</a></p>
+		</div>
+	</div>
+	<nav class="navbar navbar-default navbar-inverse" role="navigation" style="margin-top: -5rem;">
+		<div class="container-fluid"> 
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">推荐</a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse"	 data-target="#example-navbar-collapse">
+					<span class="sr-only">换导航</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			
+			<div class="collapse navbar-collapse" id="example-navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li data-toggle="collapse" data-target="#dota">
+						<a href="#">>Dota</a>
+					</li>
+					<li data-toggle="collapse" data-target="#lol">
+						<a href="#">>LOL</a>
+					</li>
+					<li><a href="#">>小吃</a></li>
+					<li><a href="#">>小吃</a></li>
+					<li><a href="#">>小吃</a></li>
+					<li><a href="#">>小吃</a></li>
+					<li><a href="#">>小吃</a></li>
+					<li><a href="#">>小吃</a></li>
+					<li class="active"><a href="#">>小吃</a></li>
+					<li><a href="#">>小吃</a></li>
+					<li><a href="#">>小吃</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">热点排行 <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">江西菜</a></li>
+							<li><a href="#">湖南菜</a></li>
+							<li><a href="#">四川菜</a></li>
+							<li class="divider"></li>
+							<li><a href="#">江西菜</a></li>
+							<li><a href="#">湖南菜</a></li>
+							<li><a href="#">四川菜</a></li>
+						</ul>
+					</li>
+					<li style="margin-left: 30rem;"><a href="#">>李国庆</a></li>
+				</ul>
+			</div>
+	    </div>
+	</nav>
+	<div class="collapse" id="dota">
+		<div class="well">
+		《DotA》（Defense of the Ancients），可以译作守护古树、守护遗迹、远古遗迹守卫， 是由暴雪公司出品即时战略游戏《魔兽争霸3》的一款多人即时对战、自定义地图，可支持10个人同时连线游戏，是暴雪公司官方认可的魔兽争霸的RPG地图。
+		</div>
+	</div>
+	<div class="collapse" id="lol">
+		 <div class="well">
+		《英雄联盟》（简称lol）是由美国Riot Games开发，中国大陆地区由腾讯游戏运营的网络游戏。
+		</div>
+	</div>
+	<div id="con1" class="row">
+		<!--左中右结构：栅格系统-->
+		<div id="con1_left" class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+			<!-- 折叠列表组：目录列表 -->
+			<div class="list-group">
+				<a href="#" class="list-group-item active" data-toggle="collapse" data-target="#tjc">
+					<h4 class="list-group-item-heading">推荐菜</h4>
+					<div class="list-group-item-collapse collapse in" 
+id="tjc">
+						<p class="list-group-item-text">油焖大虾<span class="badge pull-right">3</span></p>
+						<p class="list-group-item-text">油焖大虾<span class="badge pull-right">3</span></p>
+						<p class="list-group-item-text">油焖大虾<span class="badge pull-right">3</span></p>
+					</div>
+				</a>
+				<a href="#" class="list-group-item">
+					<h4 class="list-group-item-heading">日本菜</h4>
+					<p class="list-group-item-text">养生美味</p>
+					<p class="list-group-item-text">养生美味</p>
+				</a>
+			</div>
+			<!-- 面板 -->
+			<div class="panel-group well">
+				<div class="panel panel-default"  data-toggle="collapse" data-target="#mb">
+					<div class="panel-heading">
+						<h3 class="panel-title">面板标题</h3>
+					</div>
+					<div class="collapse collapse in" id="mb">
+						<div class="panel-body">
+							面板内容
+							<table class="table">
+								<tr>
+								<th>1</th>
+								<th>2</th>
+								<th>3</th>
+								</tr>
+								<tr>
+								<td>1</td>
+								<td>2</td>
+								<td>3</td>
+								</tr>
+							</table>
+							<ul class="list-group">
+								<li class="list-group-item">1.这里是首页</li>
+								<li class="list-group-item">2.这里是第二个项目</li>
+								<li class="list-group-item">3.这里是第三个项目</li>
+								<li class="list-group-item">4.这里是第四个项目</li>
+							</ul>
+						</div>
+						<div class="panel-footer">面板脚注</div>
+					</div>
+				</div>
+				<div class="panel panel-default"  data-toggle="collapse" data-target="#mb1">
+					<div class="panel-heading">
+						<h3 class="panel-title">面板标题</h3>
+					</div>
+					<div class="collapse collapse in" id="mb1">
+						<div class="panel-body">
+							面板内容
+						</div>
+						<div class="panel-footer">面板脚注</div>
+					</div>
+				</div>
+	        </div>
+		</div>
+		<div id="con1_mid"  class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+			<!-- 图文混排 -->
+			<div class="well" style="overflow: auto;">
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" >
+						<a href="#" class="thumbnail" data-toggle="collapse" data-target="#tu1">
+						  <img src="a.jpg">
+						</a>
+						<div class="caption text-center collapse collapse in" id="tu1">
+							<div class="text-muted">德玛西亚之力</div>
+							<br>
+							<p><a href="#" class="btn btn-primary" role="button">选中</a></p>
+						</div>
+					</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" >
+						<a href="#" class="thumbnail"  data-toggle="collapse" data-target="#tu2">
+						  <img src="a.jpg">
+						</a>
+						<div class="caption text-center collapse collapse in" id="tu2">
+							<div class="text-muted">德玛西亚之力</div>
+							<br>
+							<p><a href="#" class="btn btn-primary" role="button">选中</a></p>
+						</div>
+					</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" >
+						<a href="#" class="thumbnail"  data-toggle="collapse" data-target="#tu3">
+						  <img src="a.jpg">
+						</a>
+						<div class="caption  text-center collapse collapse in" id="tu3">
+							<div class="text-muted">德玛西亚之力</div>
+							<br>
+							<p><a href="#" class="btn btn-primary" role="button">选中</a></p>
+						</div>
+					</div>
+			</div>
+			<div class="well">
+				<div class="progress">
+					<div class="progress-bar"style="width: 60%;">60%</div>
+				</div>
+				<div class="progress">
+					<div class="progress-bar"style="min-width:20px">0%</div>
+				</div>
+				<div class="progress">
+					<div class="progress-bar progress-bar-success"
+				style="min-width:20px;width:60%">60%</div>
+				</div>
+				<div class="progress">
+					<div class="progress-bar progress-bar-success
+				progress-bar-striped" style="min-width:20px;width:60%">60%</div>
+				</div>
+				<div class="progress">
+					<div class="progress-bar progress-bar-success progress-bar-striped
+				active" style="min-width:20px;width:60%">60%</div>
+				</div>
+				<div class="progress">
+					<div class="progress-bar progress-bar-success"
+					style="min-width:20px;width:35%">35%</div>
+					<div class="progress-bar progress-bar-warning"
+					style="min-width:20px;width:20%">20%</div>
+					<div class="progress-bar progress-bar-danger"
+					style="min-width:20px;width:10%">10%</div>
+				</div>
+		    </div>
+			<div class="well">
+				<div class="media">
+					<div class="media-left">
+						<img src="a.jpg" alt="" class="media-object">
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">标题</h4>
+						<p>企鹅（学名：Spheniscidae）：有“海洋之舟”美称的企鹅是一种最古老
+						的游禽，它们很可能在地球穿上冰甲之前，就已经在南极安家落户。全世界的企鹅共有 17
+						种，大多数都分布在南半球。主要生活在南半球，属于企鹅目，企鹅科。特征为不能飞翔；
+						脚生于身体最下部，故呈直立姿势；趾间有蹼；跖行性（其他鸟类以趾着地）；前肢成鳍状；
+						羽毛短，以减少摩擦和湍流；羽毛间存留一层空气，用以保温。背部黑色，腹部白色。各个
+						种的主要区别在于头部色型和个体大小。</p>
+					</div>
+			    </div>
+			</div>
+		</div>
+		<div id="con1_right" class="col-lg-2 col-md-2 col-sm-2 col-xs-2 well">
+			<!-- 注册登录 -->
+			<a class="btn btn-success" data-toggle="modal" data-target="#reg">注册</a>
+			<a class="btn btn-primary" data-toggle="modal" data-target="#login">登录</a>
+		</div>
+		<!-- 登录模态框 -->
+		<div id="login" class="modal" tabindex="-1">
+			<!-- 窗口声明 -->
+			<div class="modal-dialog">
+				<!-- 内容声明 -->
+				<div class="modal-content">
+					<!-- 头部 -->
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+						     <span>&times;</span>
+						</button>
+						<h4 class="modal-title">会员登录</h4>
+					</div>
+					<!-- 主体 -->
+					<div class="modal-body">
+						<p>暂时无法登录会员</p>
+					</div>
+					<!-- 注脚 -->
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#reg">注册</button>
+						<button type="button" class="btn btn-primary">登录</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 注册模态框 -->
+		<div id="reg" class="modal" tabindex="-1">
+			<!-- 窗口声明 -->
+			<div class="modal-dialog">
+				<!-- 内容声明 -->
+				<div class="modal-content">
+					<!-- 头部 -->
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+						     <span>&times;</span>
+						</button>
+						<h4 class="modal-title">会员注册</h4>
+					</div>
+					<!-- 主体 -->
+					<div class="modal-body">
+						<!-- 注册表单 -->
+						<div class="form-group">
+							<form class="form-horizontal row">
+								<label class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">Email</label>
+								<input type="email" name="email" class="col-lg-8 col-md-8 col-sm-8 col-xs-8"  placeholder="Email"/>
+								<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+							</form>
+							<form class="form-horizontal row" style="margin-top: 15px;">
+								<label class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">Password</label>
+								<input type="password" name="password" class="col-lg-8 col-md-8 col-sm-8 col-xs-8" placeholder="Password"/>
+								<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+							</form>
+							<form class="form-horizontal row" style="margin-top: 15px;">
+								<label class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">Username</label>
+								<input type="text" name="username" class="col-lg-8 col-md-8 col-sm-8 col-xs-8" placeholder="Username"/>
+								<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+							</form>
+						</div>
+					</div>
+					<!-- 注脚 -->
+					<div class="modal-footer">
+						<button type="button" class="btn btn-success">注册</button>
+						<button type="button" class="btn btn-warning">登录</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

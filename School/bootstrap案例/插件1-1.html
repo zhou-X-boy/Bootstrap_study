@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>BootstrapV3 101 Template插件1</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+	<style>
+		.affix{
+			top: 0px;
+		}
+	</style>
+  </head>
+  <body>
+    <!--附加导航，浮标-->
+    <div id="aff" style="height: 100px;" data-spy="affix" data-oddset="10"><!--导航封装-->
+    	<ul class="nav nav-pills nav-justified" >
+    		<li class="active"><a href="#">首页</a></li>
+    		<li><a href="#">电影</a></li>
+    		<li><a href="#">电视剧</a></li>
+    	</ul>
+    </div>
+	<div class="container row">
+		<!--滚动侦听：长文字，高屏幕，锚点超链接的逆过程-->
+		<!--导航部分-->
+		<div id="ml" class="col-lg-3 col-md-3 col-sm-3"><!--导航封装-->
+			<ul class="nav nav-pills nav-stacked" style="position: fixed; top: 100px; left: 60px;">
+				<li><a href="#m1">第一集</a></li>
+				<li><a href="#m2">第二集</a></li>
+				<li><a href="#m3">第三集</a></li>
+			</ul>
+		</div>
+	    <!--长文章部分-->
+		<div data-spy="scroll" data-target="#ml" data-offset="0" style="height: 300px; overflow: auto; position: relative; top:100px; left: 0px; " class="col-lg-9 col-md-9 col-sm-9">
+			
+			<h2 id="m1" data-toggle="tooltip"  title="先帝赵恒驾崩，赵祯继位">第一集</h2>
+				宋天圣年间，先帝赵恒驾崩，赵祯继位，太后刘娥辅政。赵祯继位之后便想弄清楚自己的生母是谁，他深夜把乳娘叫来，再三追问之下，才从她口中得知，自己的生母便是刘娥身边的嫔妃李兰惠，她此刻正在永定陵为先皇守陵。赵祯确认生母身份之后，深夜骑马出宫直奔永定陵而去，就是要见一见生母李兰惠。赵祯来到永定陵门口之时，被守陵的官兵给拦了下来，这时，皇帝的仪仗队也出现在了陵前，目的就是要把赵祯请回宫去，但赵祯主意已定，不见到生母就是不肯离开。
+
+			<h2 id="m2" class="popover-show" data-container="body" data-toggle="popover" data-placement="right" data-content="八大王爷当众提出异议">第二集</h2>
+			   八大王爷当众提出异议，言语之间的话都是说给把持朝政的太后听的，吕相立马站出来引经据典的回怼，两人你一句我一句的吵了起来，说不过的八大王爷气的不行。太后适时的出声打断了争执的吕相和八大王爷，批准了范仲淹的辞官奏疏，并向皇帝提及了张纶，拍板定下由张纶接替范仲淹，负责修堰一事。下朝之后赵祯脸色不好的回了寝宫，郭皇后带着一众宫女来给赵桢送早点，碰上了无诏逾越，跑来寝殿也给赵桢送东西的杨美人，自然是两人见面分外眼红，吵着吵着就动起手了。赵桢并不喜原配郭皇后，她是太后逼迫他娶的，做做样子的各自安抚起来。八大王爷因为在朝堂上被吕相一怼，心中郁闷，回到王府又发起了疯来，大喊大叫的骂着刘娥把持朝政觊觎他们赵家的江山。太后刘娥对于八大王时不时的闹起来给自己添堵，交代御医过府诊治，若是他这疯癫的老毛病再不见好，就让他在府中修养，不用上朝了。其实就是眼不见心静。郭皇后带着后宫一众妃子去给太后请安，给太后带了一点李娘子晾晒的梅子等蜜饯零嘴，她生性鲁莽，没有心机，就是傻白甜，一席话惹得太后直接冷了脸。其实所谓的李娘子就是守灵的李妃，也是赵桢故意让蠢得可以的郭皇后拿去试探太后反应的。赵桢得知太后因为蜜饯的事儿发了一顿脾气逮着内侍斥责了一通，也就清楚了太后对于自己的想要迎接生母回宫的事是抵触的，心里自然有怒气，能说说心里话的就只能是贴身伺候的张茂则了，若是亲生母亲，哪有坑儿子的，给自己娶了一个愚昧的莽妇郭皇后当结发妻子！刘娥身为太后，对于赵祯这个从小养育长大的养子也是疼爱的，她无子，也并不是夺了李妃的儿子以巩固自己的地位，而是先帝非要塞给她的。
+			<h2 id="m3">第三集</h2>
+				赵祯没有想到，他一时好心让宫中所有人都做梁家蜜饯，可没想到却被京城的富人利用，致使蜜饯价格贵如天价，腌制蜜饯的药材也贵如天价，他也间接害得梁家没有了生计依靠。赵祯没有想到自己好心却办了一件坏事，在听到韩琦说明原由之后，他把自己一个人关起来自省自责。苗心禾在刘娥那里剪花钿，深得刘娥的喜欢，而她也很想永远留在宫里陪着赵祯，所以刘娥给苗心禾建议，让她将花钿送去给皇后，讨得皇后的喜欢便能留下来。苗心禾正为刘娥的建议思考琢磨之时，张茂则前来告诉刘娥，赵祯为梁家的事情自省自责，苗心禾特别的担心，于是主动要求去劝赵祯先吃饭再自省。上早朝之时，程琳为大辽使节为乾元节而来的事情，跟赵祯汇报大辽的要求，表示大辽对位次之事不满意。赵祯觉得，位次之事只是小事，不想跟大辽使节锱铢必较，可程琳却眼里毫无赵祯，直接表示反对，差点就冲撞了赵祯。赵祯因为程琳是刘娥的人，并没有当殿斥责程琳，而是听程琳分析，最后无奈准许程琳继续跟大辽使节谈判。早朝之后，赵祯把王曾找来，质问程琳的为人，以及程琳所做的事情。赵祯觉得，程琳建议刘娥称帝，是把他当成了李显这个无能的傀儡皇帝，对程琳非常的不满。王曾替赵祯分析他的所为，说出自己的一番见解，让赵祯知道应该如何做这个皇帝。
+		</div>
+	</div>  
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

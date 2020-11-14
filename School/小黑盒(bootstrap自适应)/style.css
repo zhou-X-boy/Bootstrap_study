@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.affix{top:50px;z-index:9;}/*自定义的，覆盖class的affix，用于达到规定偏移量后固定附加导航*/
+#nav1{
+    width: 85%;
+}
+.one{
+    /* border: 1px solid blue;  */
+    width: 100%;
+    height: 300px; 
+    font-size: 25px;
+}
+.one a{
+    color: white;
+}
+
+.btn1-a{
+    font-size: 14px;
+}
+#header1{
+    background-image: url(img/bz/gta5.jpg); 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#header2{
+    background-image: url(img/bz/2077.jpg); 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#header3{
+    background-image: url(img/bz/noita.jpg); 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.container{
+    padding: 0;/* 覆盖bootstrap已有class相同属性值 */
+}
+
+.dt1{
+    width: 10vw;
+    height: 90px;
+}
+.form1{
+    padding-top: 2.5%;
+}

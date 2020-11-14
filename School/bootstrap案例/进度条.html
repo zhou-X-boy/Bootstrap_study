@@ -1,0 +1,93 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="gb2312">  
+    <meta name="viewport" content="width = device-width,initial-scale = 1.0">  
+    <link rel="stylesheet" href="css/bootstrap.min.css">  
+    <script src = "js/jquery-3.2.1.min.js"></script>  
+    <script src = "js/bootstrap.min.js"></script>  
+    <title>动态进度条：进度条插件=进度条组件+js/jq</title>  
+</head>  
+<body style="padding:30px;">  
+    <div class="container">  
+        <div class="col-lg-4">  
+          <!--外层容器-->
+	
+          <div id="wrapper" style="padding-left: 20%;padding-right:20%">
+		
+            <div class="progress progress-striped active" >
+	        
+              <div id="prog" class="progress-bar" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" 
+			  style="width:0%;min-width: 3em;">
+	                <span id="proglabel">正在发送...</span>
+	        
+              </div>
+	    
+            </div>    
+    
+         </div>  
+       </div> 
+    </div>
+
+</body>  
+
+<script>
+/*JQuery【js函数库】语法：使用前先导入JQuery.js，
+    玩js就是玩对象，玩对象的方法和属性
+	玩jQ就是玩函数/方法、参数
+	
+	$:获取对象的方法，（）里面的参数就是各种选择器,
+	$().ready：侦听XXX事件,相当于js中的window.load事件
+	JQuery调用函数是可以连续的
+	
+	.css("css属性名","css属性值")：找style中的相应css属性
+	.text():修改值,
+	.addClass()：添加新的class
+	.removerClass():去掉某个class
+*/
+$().ready(function() {
+ 
+	
+// 模拟进度条：百分数增加，0-30时为红色，30-60为黄色，60-90为蓝色，>90为绿色
+	
+  var value = 0;
+	
+  setInterval(function(e){
+		
+     if (value != 100) {
+			
+        value = parseInt(value) + 1;
+
+        console.log(value);			
+        $("#prog").css("width", value + "%").text(value + "%");
+	//****		
+        if (value>=0 && value<30) 
+				
+          { $("#prog").addClass("progress-bar-danger");
+	 } 
+        else if (value>=30 && value <60) 		    	
+          { $("#prog").removeClass("progress-bar-danger");//******
+		        
+           $("#prog").addClass("progress-bar-warning");
+  } 
+        else if (value>=60 && value <90) 		        
+          {$("#prog").removeClass("progress-bar-warning");
+		        
+           $("#prog").addClass("progress-bar-info");
+	 } 
+        else if(value >= 90 && value<=100) 		        
+          {$("#prog").removeClass("progress-bar-info");
+		        
+           $("#prog").addClass("progress-bar-success");  }
+		
+     }
+	
+  }, 50);
+
+});
+
+</script>
+</html>  
+
+
+
